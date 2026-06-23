@@ -14,11 +14,21 @@ Repositori ini berisi hasil tugas **Tugas Sub CPMK-3** yang dikerjakan dengan pe
 ## 📂 Struktur Proyek
 
 ```
-UAS_PK/
+TUGAS_SUBCPMK_3/
 ├── Data/
-│   ├── raw/                  # dokumen putusan teks mentah
-│   └── processed/            # dataset terstruktur untuk analisis
-│       └── cases.csv
+│   ├── raw/                  # dokumen putusan teks mentah (.txt)
+│   ├── processed/            # data hasil pemrosesan dan ekstraksi fitur
+│   │   └── cases.csv         # dataset terstruktur untuk representasi kasus
+│   ├── eval/                 # hasil evaluasi dan metrik model
+│   │   ├── evaluation_report_*.txt
+│   │   ├── prediction_metrics_*.csv
+│   │   ├── retrieval_metrics_k3_*.csv
+│   │   ├── retrieval_metrics_k5_*.csv
+│   │   ├── retrieval_metrics_k10_*.csv
+│   │   └── queries.json
+│   └── results/              # keluaran prediksi dan detail model
+│       ├── detailed_predictions_*.json
+│       └── predictions_*.csv
 ├── Notebook/
 │   ├── PK_Tahap_1_(Case_Base).ipynb
 │   ├── PK_Tahap_2_(Case_Representation).ipynb
@@ -31,10 +41,12 @@ UAS_PK/
 
 ## 📖 Komponen Utama
 
-- `Data/raw/` : file putusan Pengadilan Negeri mentah.
-- `Data/processed/cases.csv` : dataset yang sudah diproses menjadi tabel kasus untuk representasi dan evaluasi.
-- `Notebook/` : notebook Jupyter untuk setiap tahapan CPMK-3.
-- `requirements.txt` : daftar paket Python yang diperlukan.
+- `Data/raw/` : dokumen putusan Pengadilan Negeri dalam format teks mentah.
+- `Data/processed/cases.csv` : dataset terstruktur hasil ekstraksi informasi dari dokumen raw.
+- `Data/eval/` : file hasil evaluasi, metrik retrieval, dan laporan evaluasi model.
+- `Data/results/` : prediksi model dan detail hasil yang dapat dipakai untuk analisis.
+- `Notebook/` : serangkaian Jupyter Notebook untuk setiap tahapan pengerjaan tugas.
+- `requirements.txt` : daftar paket Python yang dibutuhkan untuk menjalankan notebook dan analisis.
 
 ## 🚀 Cara Instalasi
 
