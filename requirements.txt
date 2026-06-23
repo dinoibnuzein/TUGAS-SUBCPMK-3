@@ -1,0 +1,12 @@
+notebook
+pandas
+numpy
+scikit-learn
+transformers
+torch
+pdfminer.six
+requests
+beautifulsoup4
+lxml
+matplotlib
+seaborn
